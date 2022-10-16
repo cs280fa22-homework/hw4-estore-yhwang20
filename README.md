@@ -3,9 +3,9 @@
 This repository contains a homework submission.
 
 ```
-JHED=
-GITHUB_USERNAME=
-GITHUB_REPO=
+JHED=yhwang20
+GITHUB_USERNAME=yhwang20
+GITHUB_REPO=hw4-estore-yhwang20
 GITHUB_PAGE=
 ```
 
