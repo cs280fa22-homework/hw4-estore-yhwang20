@@ -12,6 +12,7 @@ function Shop(props) {
     API.getAll()
       .then((items) => setItems(items))
       .catch((err) => console.log(err));
+    
   }, []);
 
   return (

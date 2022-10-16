@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
@@ -10,26 +10,30 @@ import { Container, useToast } from "@chakra-ui/react";
 function App() {
   const [cart, setCart] = useState({});
   const [cartSize, setCartSize] = useState(0);
-  const toast = useToast()
+  const toast = useToast();
   const addToCart = (item, quantity) => {
+    const quant = cart[item.id] ? cart[item.id].quantity: -1;
+    if (quant == -1) {
+      toast({
+        title: 'Added Item',
+        description: "We've added the item to your cart!",
+        status: 'success',
+        duration: 4000,
+        isClosable: true,
+      });
+    }
     setCart((cart) => {
       const currQuantity = cart[item.id]
         ? cart[item.id].quantity + quantity
         : quantity;
+      
       if (currQuantity == 1 || currQuantity == quantity) {
         let num = 1 + cartSize;
         setCartSize(num);
-        toast({
-          title: 'Added Item',
-          description: "We've added the item to your cart!",
-          status: 'success',
-          duration: 4000,
-          isClosable: true,
-        });
+        
       }
       return { ...cart, [item.id]: { ...item, quantity: currQuantity } };
     });
-    
   };
 
   // PRE: item is already in the cart!

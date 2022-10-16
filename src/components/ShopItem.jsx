@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function ShopItem(props) {
   const { item, addToCart } = props;
-
+  
   return (
     <Box
       maxW="sm"
