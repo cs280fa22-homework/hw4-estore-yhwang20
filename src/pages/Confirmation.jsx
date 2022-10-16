@@ -7,9 +7,10 @@ import PropTypes from "prop-types";
 function Confirmation(props) {
   const { clearCart } = props;
   const location = useLocation();
-
   const name = location.state ? location.state.name : undefined;
   const total = location.state ? location.state.total : 0;
+  
+  
 
   useEffect(() => {
     return () => {

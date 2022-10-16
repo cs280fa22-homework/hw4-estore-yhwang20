@@ -10,7 +10,9 @@ function Cart(props) {
 
   useEffect(() => {
     setTotal(items.reduce((sum, item) => sum + item.price * item.quantity, 0));
-  }, []);
+  }, [items]);
+
+  
 
   return (
     <>

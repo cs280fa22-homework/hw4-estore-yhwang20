@@ -30,6 +30,7 @@ function CartItem(props) {
     if (quantity >= MIN_QUANTITY) {
       setQuantity(quantity);
     }
+    updateCart(item, quantity);
   };
 
   const handleOnChange = (event) => {
@@ -42,7 +43,11 @@ function CartItem(props) {
   };
 
   const decrementQuantity = () => {
-    updateQuantity(quantity - 1);
+     if (quantity == 1) {
+       updateCart(item, 0);
+    } else {
+       updateQuantity(quantity - 1);
+    }
   };
 
   const handleOnSubmit = (event) => {

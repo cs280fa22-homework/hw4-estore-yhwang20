@@ -28,7 +28,12 @@ function Payment(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate("/confirmation", { name: name, total: total });
+    navigate("/confirmation", { 
+      state:{
+        name: name, 
+        total: total 
+      }
+    });
   };
 
   const isValid =
