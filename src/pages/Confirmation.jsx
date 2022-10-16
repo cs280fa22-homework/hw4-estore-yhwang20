@@ -37,7 +37,7 @@ function Confirmation(props) {
             </Text>
           </>
         )}
-        <Link to="/">
+        <Link to="/hw4-estore-yhwang20">
           <Button>Back to store!</Button>
         </Link>
       </Stack>

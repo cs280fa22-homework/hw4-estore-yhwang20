@@ -53,7 +53,7 @@ function Product(props) {
     event.preventDefault();
     addToCart(item, quantity);
     setQuantity(1);
-    navigate("/");
+    navigate("/hw4-estore-yhwang20");
   };
 
   return (
@@ -71,7 +71,7 @@ function Product(props) {
             <Box>
               <Text fontSize="lg">No item found!</Text>
             </Box>
-            <Link to="/">
+            <Link to="/hw4-estore-yhwang20">
               <Button variant="outline">Back to product list</Button>
             </Link>
           </VStack>
@@ -110,7 +110,7 @@ function Product(props) {
               </FormControl>
               <Stack spacing={4} direction="row" align="center" mt={4}>
                 <Button onClick={handleOnClick}>Add to cart</Button>
-                <Link to="/">
+                <Link to="/hw4-estore-yhwang20">
                   <Button variant="outline">Back to product list</Button>
                 </Link>
               </Stack>

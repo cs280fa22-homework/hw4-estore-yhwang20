@@ -6,7 +6,7 @@ function Header(props) {
   const { numItems } = props;
   return (
     <Box my={2} p={4} borderWidth="2px" borderRadius="lg" overflow="hidden">
-      <Link to="/">Product List</Link> | <Link to = "/cart">
+      <Link to="/hw4-estore-yhwang20">Product List</Link> | <Link to = "/cart">
       Cart 🛒 </Link>
       {numItems > 0 ? (
         <Text as="sup">
