@@ -23,7 +23,7 @@ function App() {
           title: 'Added Item',
           description: "We've added the item to your cart!",
           status: 'success',
-          duration: 9000,
+          duration: 4000,
           isClosable: true,
         });
       }
